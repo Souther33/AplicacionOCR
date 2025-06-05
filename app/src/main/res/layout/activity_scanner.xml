@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A49A9A"
+    tools:context=".ScannerActivity">
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <Button
+        android:id="@+id/btn_camara2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableTop="@drawable/add_a_photo_white"
+        android:padding="0dp"
+        android:text="Cámara"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_guardar_registro2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_guardar_registro2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_guardar_registro2" />
+
+    <!--<com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <!--<jp.wasabeef.richeditor.RichEditor
+        android:id="@+id/editor_de_texto2"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+        android:gravity="top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombre_documento2" />-->
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombre_documento2" />
+
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:fillViewport="true"
+        android:background="#f5f5f5"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editor_toolbar">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <jp.wasabeef.richeditor.RichEditor
+                    android:id="@+id/editor_de_texto2"
+                    android:layout_width="800dp"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+                    android:minHeight="842dp"
+                    android:padding="16dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </ScrollView>-->
+
+
+
+    <TextView
+        android:id="@+id/textoReconocido2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pdfView" />
+
+    <Button
+        android:id="@+id/btn_guardar_documento2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:padding="0dp"
+        android:text="Guardar"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_guardar_registro2" />
+
+    <Button
+        android:id="@+id/btn_guardar_registro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/save_white"
+        android:padding="0dp"
+        android:text="Registrar"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_guardar_documento2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_guardar_documento2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_camara2"
+        app:layout_constraintTop_toTopOf="@+id/btn_guardar_documento2" />
+
+    <EditText
+        android:id="@+id/et_nombre_documento2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="10dp"
+        android:text="Documento"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<View
+        android:id="@+id/box_camara2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/et_nombre_documento2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editor_toolbar2"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
