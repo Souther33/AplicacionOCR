@@ -1,0 +1,96 @@
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Error at C:/Users/Subhan/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake:69 (message):
+  The C compiler
+
+    "C:/Users/Subhan/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: C:/Users/Subhan/AndroidStudioProjects/AplicacionOCR/openCVLibrary/.cxx/Debug/363l2t5d/arm64-v8a/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):C:\Users\Subhan\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_2c232 && [1/2] Building C object CMakeFiles/cmTC_2c232.dir/testCCompiler.c.o
+    [2/2] Linking C executable cmTC_2c232
+    FAILED: cmTC_2c232 
+    cmd.exe /C "cd . && C:\Users\Subhan\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/Subhan/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments CMakeFiles/cmTC_2c232.dir/testCCompiler.c.o -o cmTC_2c232  -latomic -lm && cd ."
+     El volumen de la unidad C no tiene etiqueta.
+     El número de serie del volumen es: C448-6EA7
+    
+     Directorio de C:\
+    
+    28/09/2023  10:06    <DIR>          $WINDOWS.~BT
+    12/03/2025  14:21    <DIR>          addressAppMavenJavaFX
+    21/01/2025  10:10    <DIR>          dev
+    24/09/2024  10:58    <DIR>          devHLC_2425
+    19/10/2023  08:28    <DIR>          ESD
+    07/11/2007  09:00            17.734 eula.1028.txt
+    07/11/2007  09:00            17.734 eula.1031.txt
+    07/11/2007  09:00            10.134 eula.1033.txt
+    07/11/2007  09:00            17.734 eula.1036.txt
+    07/11/2007  09:00            17.734 eula.1040.txt
+    07/11/2007  09:00               118 eula.1041.txt
+    07/11/2007  09:00            17.734 eula.1042.txt
+    07/11/2007  09:00            17.734 eula.2052.txt
+    07/11/2007  09:00            17.734 eula.3082.txt
+    11/12/2024  15:28    <DIR>          Games
+    07/11/2007  09:00             1.110 globdata.ini
+    25/03/2023  15:16    <DIR>          GOG Games
+    16/02/2024  11:10             6.704 graph.log
+    10/04/2025  14:00    <DIR>          inetpub
+    07/11/2007  09:44           855.040 install.exe
+    07/11/2007  09:00               843 install.ini
+    07/11/2007  09:44            75.280 install.res.1028.dll
+    07/11/2007  09:44            95.248 install.res.1031.dll
+    07/11/2007  09:44            90.128 install.res.1033.dll
+    07/11/2007  09:44            96.272 install.res.1036.dll
+    07/11/2007  09:44            94.224 install.res.1040.dll
+    07/11/2007  09:44            80.400 install.res.1041.dll
+    07/11/2007  09:44            78.864 install.res.1042.dll
+    07/11/2007  09:44            74.768 install.res.2052.dll
+    07/11/2007  09:44            95.248 install.res.3082.dll
+    02/06/2025  05:02    <DIR>          Intel
+    18/02/2023  01:11    <DIR>          Mono
+    18/02/2023  01:11         2.179.072 mono.msi
+    01/12/2006  23:37           904.704 msdia80.dll
+    07/12/2019  11:14    <DIR>          PerfLogs
+    28/05/2025  14:24    <DIR>          Program Files
+    12/03/2025  23:16    <DIR>          Program Files (x86)
+    10/12/2022  22:44    <DIR>          Riot Games
+    17/10/2024  12:45    <DIR>          sqlite
+    18/02/2023  01:11    <DIR>          System
+    18/02/2023  01:11    <DIR>          System64
+    22/01/2024  22:06    <DIR>          Users
+    07/11/2007  09:00             5.686 vcredist.bmp
+    07/11/2007  08:09         1.442.522 VC_RED.cab
+    07/11/2007  08:12           232.960 VC_RED.MSI
+    28/11/2024  13:17    <DIR>          VS-workplace
+    31/05/2025  21:53    <DIR>          Windows
+    10/05/2025  13:14    <DIR>          XboxGames
+                  27 archivos      6.543.463 bytes
+                  21 dirs  45.890.977.792 bytes libres
+    "Bienvenidos hoy al Interprete de comandos"
+    clang: error: no such file or directory: 'CMakeFiles/cmTC_2c232.dir/testCCompiler.c.o'
+    ninja: build stopped: subcommand failed.
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt
+
+

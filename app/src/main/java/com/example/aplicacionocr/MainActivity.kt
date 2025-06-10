@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if(it.resultCode == RESULT_CANCELED) {
-            Toast.makeText(this, "El usuario canceló", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "No se ha podido iniciar sesión, prueba más tarde.", Toast.LENGTH_SHORT).show()
         }
     }
 

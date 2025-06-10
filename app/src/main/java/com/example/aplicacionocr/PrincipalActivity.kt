@@ -1,21 +1,16 @@
 package com.example.aplicacionocr
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aplicacionocr.databinding.ActivityPrincipalBinding
 import com.example.aplicacionocr.fragments.DocumentosFragment
-import com.example.aplicacionocr.fragments.FragmentsViewModel
 import com.example.aplicacionocr.fragments.NubeFragment
 import com.example.aplicacionocr.fragments.OpcionesFragment
 import com.example.aplicacionocr.fragments.UsuarioFragment
@@ -47,7 +42,6 @@ class PrincipalActivity : AppCompatActivity() {
 
     private fun setListeners() {
         binding.fabCamara.setOnClickListener {
-            //startActivity(Intent(this, CamaraActivity::class.java))
             startActivity(Intent(this, ScannerActivity::class.java))
         }
 
@@ -86,38 +80,6 @@ class PrincipalActivity : AppCompatActivity() {
             cargarFragments(NubeFragment())
             resaltarBotonActivo(binding.ibCloud)
         }
-    }
-
-    private fun update(c: DocumentoModel) {
-        val i = Intent(this, CamaraActivity::class.java).apply {
-            putExtra("PERSONAJE", c)
-        }
-
-        startActivity(i)
-    }
-
-    private fun borrarDocumento(position: Int) {
-        val id = lista[position].id
-        // Eliminamos de la lista
-        lista.removeAt(position)
-        // Eliminamos de la base de datos
-        if(CrudDocumentos().borrar(id)) {
-            adapter.notifyItemRemoved(position)
-        } else {
-            Toast.makeText(this, "No se eliminó ningún registro", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun traerRegistros() {
-        lista = CrudDocumentos().read()
-    }
-
-    private fun filtrarLista(query: String) {
-        val listaFiltrada = lista.filter {
-            it.nombre.contains(query, ignoreCase = true)
-        }
-
-        adapter.actualizarLista(listaFiltrada.toMutableList())
     }
 
     private fun cargarFragments(fragment: Fragment) {

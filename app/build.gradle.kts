@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.aplicacionocr"
-        minSdk = 30
+        minSdk = 29
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -36,6 +36,16 @@ android {
     }
     viewBinding {
         enable = true
+    }
+
+    packaging {
+        resources {
+            excludes += "META-INF/DEPENDENCIES"
+            excludes += "META-INF/LICENSE"
+            excludes += "META-INF/LICENSE.txt"
+            excludes += "META-INF/NOTICE"
+            excludes += "META-INF/NOTICE.txt"
+        }
     }
 }
 
@@ -73,13 +83,32 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:21.0.0")
 
     // Generar PDF más preciso
-    implementation("com.itextpdf:itext7-core:7.2.3")
+    //implementation("com.itextpdf:itext7-core:7.2.3")
     // Para HTML a PDF
     implementation("com.itextpdf:html2pdf:4.0.4")
 
     //PDF Viewer
     implementation("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
     //implementation("com.github.barteksc:android-pdf-viewer:2.8.2")
+
+    /*implementation("com.itextpdf:kernel:7.1.15")
+    implementation("com.itextpdf:layout:7.1.15")*/
+    //implementation("com.itextpdf:itext7-core:7.2.3") // o una versión similar
+    implementation("com.itextpdf:itext7-core:7.2.5")
+
+    //Para Google Drive guardado en nube
+    // Cliente para autenticación OAuth2 y conexión a Google Drive
+    implementation("com.google.api-client:google-api-client-android:1.34.0")
+    implementation("com.google.oauth-client:google-oauth-client-jetty:1.34.1")
+    implementation("com.google.apis:google-api-services-drive:v3-rev197-1.25.0") {
+        exclude(group = "org.apache.httpcomponents", module = "httpclient")
+    }
+
+    implementation("com.google.code.gson:gson:2.10.1")
+
+    //implementation("org.opencv:opencv-android:4.7.0")
+
+    implementation(project(":openCVLibrary"))
 
 
 

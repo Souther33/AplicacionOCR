@@ -50,4 +50,18 @@ class FragmentsViewModel: ViewModel() {
             cargarDocumentos() // recarga para estado consistente
         }
     }
+
+    fun setListaDocumentos(nuevaLista: List<DocumentoModel>) {
+        CrudDocumentos().borrarTodo()
+
+        // Insertar uno a uno
+        nuevaLista.forEach {
+            println("Insertando: ${it.nombre}")
+            CrudDocumentos().create(it)
+        }
+
+
+        // Actualizamos el LiveData
+        _documentos.postValue(nuevaLista.toMutableList())
+    }
 }

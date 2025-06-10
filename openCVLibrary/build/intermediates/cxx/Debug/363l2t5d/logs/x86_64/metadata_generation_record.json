@@ -1,0 +1,119 @@
+[
+  {
+    "level_": 0,
+    "message_": "Start JSON generation. Platform version: 21 min SDK version: x86_64",
+    "file_": "C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "rebuilding JSON C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\.cxx\\Debug\\363l2t5d\\x86_64\\android_gradle_build.json due to:",
+    "file_": "C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "- no fingerprint file, will remove stale configuration folder",
+    "file_": "C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "removing stale contents from \u0027C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\.cxx\\Debug\\363l2t5d\\x86_64\u0027",
+    "file_": "C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "created folder \u0027C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\.cxx\\Debug\\363l2t5d\\x86_64\u0027",
+    "file_": "C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "executing cmake @echo off\n\"C:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.22.1\\\\bin\\\\cmake.exe\" ^\n  \"-HC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\libcxx_helper\" ^\n  \"-DCMAKE_SYSTEM_NAME\u003dAndroid\" ^\n  \"-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\" ^\n  \"-DCMAKE_SYSTEM_VERSION\u003d21\" ^\n  \"-DANDROID_PLATFORM\u003dandroid-21\" ^\n  \"-DANDROID_ABI\u003dx86_64\" ^\n  \"-DCMAKE_ANDROID_ARCH_ABI\u003dx86_64\" ^\n  \"-DANDROID_NDK\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\" ^\n  \"-DCMAKE_ANDROID_NDK\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\" ^\n  \"-DCMAKE_TOOLCHAIN_FILE\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\\\\build\\\\cmake\\\\android.toolchain.cmake\" ^\n  \"-DCMAKE_MAKE_PROGRAM\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.22.1\\\\bin\\\\ninja.exe\" ^\n  \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\363l2t5d\\\\obj\\\\x86_64\" ^\n  \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\363l2t5d\\\\obj\\\\x86_64\" ^\n  \"-DCMAKE_BUILD_TYPE\u003dDebug\" ^\n  \"-BC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\.cxx\\\\Debug\\\\363l2t5d\\\\x86_64\" ^\n  -GNinja ^\n  \"-DANDROID_STL\u003dc++_shared\"\n",
+    "file_": "C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "@echo off\n\"C:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.22.1\\\\bin\\\\cmake.exe\" ^\n  \"-HC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\libcxx_helper\" ^\n  \"-DCMAKE_SYSTEM_NAME\u003dAndroid\" ^\n  \"-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\" ^\n  \"-DCMAKE_SYSTEM_VERSION\u003d21\" ^\n  \"-DANDROID_PLATFORM\u003dandroid-21\" ^\n  \"-DANDROID_ABI\u003dx86_64\" ^\n  \"-DCMAKE_ANDROID_ARCH_ABI\u003dx86_64\" ^\n  \"-DANDROID_NDK\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\" ^\n  \"-DCMAKE_ANDROID_NDK\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\" ^\n  \"-DCMAKE_TOOLCHAIN_FILE\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\\\\build\\\\cmake\\\\android.toolchain.cmake\" ^\n  \"-DCMAKE_MAKE_PROGRAM\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.22.1\\\\bin\\\\ninja.exe\" ^\n  \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\363l2t5d\\\\obj\\\\x86_64\" ^\n  \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\363l2t5d\\\\obj\\\\x86_64\" ^\n  \"-DCMAKE_BUILD_TYPE\u003dDebug\" ^\n  \"-BC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\.cxx\\\\Debug\\\\363l2t5d\\\\x86_64\" ^\n  -GNinja ^\n  \"-DANDROID_STL\u003dc++_shared\"\n",
+    "file_": "C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "Received process result: 1",
+    "file_": "C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  },
+  {
+    "level_": 0,
+    "message_": "JSON generation completed with problem. Exception: com.android.ide.common.process.ProcessException: -- The C compiler identification is Clang 18.0.1\n-- The CXX compiler identification is Clang 18.0.1\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - failed\n-- Check for working C compiler: C:/Users/Subhan/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe\n-- Check for working C compiler: C:/Users/Subhan/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe - broken\n-- Configuring incomplete, errors occurred!\nSee also \"C:/Users/Subhan/AndroidStudioProjects/AplicacionOCR/openCVLibrary/.cxx/Debug/363l2t5d/x86_64/CMakeFiles/CMakeOutput.log\".\nSee also \"C:/Users/Subhan/AndroidStudioProjects/AplicacionOCR/openCVLibrary/.cxx/Debug/363l2t5d/x86_64/CMakeFiles/CMakeError.log\".\n\nC++ build system [configure] failed while executing:\n    @echo off\n    \"C:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.22.1\\\\bin\\\\cmake.exe\" ^\n      \"-HC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\libcxx_helper\" ^\n      \"-DCMAKE_SYSTEM_NAME\u003dAndroid\" ^\n      \"-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\" ^\n      \"-DCMAKE_SYSTEM_VERSION\u003d21\" ^\n      \"-DANDROID_PLATFORM\u003dandroid-21\" ^\n      \"-DANDROID_ABI\u003dx86_64\" ^\n      \"-DCMAKE_ANDROID_ARCH_ABI\u003dx86_64\" ^\n      \"-DANDROID_NDK\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\" ^\n      \"-DCMAKE_ANDROID_NDK\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\" ^\n      \"-DCMAKE_TOOLCHAIN_FILE\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\27.0.12077973\\\\build\\\\cmake\\\\android.toolchain.cmake\" ^\n      \"-DCMAKE_MAKE_PROGRAM\u003dC:\\\\Users\\\\Subhan\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.22.1\\\\bin\\\\ninja.exe\" ^\n      \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\363l2t5d\\\\obj\\\\x86_64\" ^\n      \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\363l2t5d\\\\obj\\\\x86_64\" ^\n      \"-DCMAKE_BUILD_TYPE\u003dDebug\" ^\n      \"-BC:\\\\Users\\\\Subhan\\\\AndroidStudioProjects\\\\AplicacionOCR\\\\openCVLibrary\\\\.cxx\\\\Debug\\\\363l2t5d\\\\x86_64\" ^\n      -GNinja ^\n      \"-DANDROID_STL\u003dc++_shared\"\n  from C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\nCMake Warning (dev) in CMakeLists.txt:\n  No project() command is present.  The top-level CMakeLists.txt file must\n  contain a literal, direct call to the project() command.  Add a line of\n  code such as\n\n    project(ProjectName)\n\n  near the top of the file, but after cmake_minimum_required().\n\n  CMake is pretending there is a \"project(Project)\" command on the first\n  line.\nThis warning is for project developers.  Use -Wno-dev to suppress it.\n\nCMake Error at C:/Users/Subhan/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake:69 (message):\n  The C compiler\n\n    \"C:/Users/Subhan/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe\"\n\n  is not able to compile a simple test program.\n\n  It fails with the following output:\n\n    Change Dir: C:/Users/Subhan/AndroidStudioProjects/AplicacionOCR/openCVLibrary/.cxx/Debug/363l2t5d/x86_64/CMakeFiles/CMakeTmp\n    \n    Run Build Command(s):C:\\Users\\Subhan\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe cmTC_a9bfa \u0026\u0026 [1/2] Building C object CMakeFiles/cmTC_a9bfa.dir/testCCompiler.c.o\r\n    [2/2] Linking C executable cmTC_a9bfa\r\n    FAILED: cmTC_a9bfa \r\n    cmd.exe /C \"cd . \u0026\u0026 C:\\Users\\Subhan\\AppData\\Local\\Android\\Sdk\\ndk\\27.0.12077973\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target\u003dx86_64-none-linux-android21 --sysroot\u003dC:/Users/Subhan/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE\u003d2 -Wformat -Werror\u003dformat-security -Wl,--build-id\u003dsha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments CMakeFiles/cmTC_a9bfa.dir/testCCompiler.c.o -o cmTC_a9bfa  -latomic -lm \u0026\u0026 cd .\"\r\n     El volumen de la unidad C no tiene etiqueta.\r\n     El número de serie del volumen es: C448-6EA7\r\n    \r\n     Directorio de C:\\\r\n    \r\n    28/09/2023  10:06    \u003cDIR\u003e          $WINDOWS.~BT\r\n    12/03/2025  14:21    \u003cDIR\u003e          addressAppMavenJavaFX\r\n    21/01/2025  10:10    \u003cDIR\u003e          dev\r\n    24/09/2024  10:58    \u003cDIR\u003e          devHLC_2425\r\n    19/10/2023  08:28    \u003cDIR\u003e          ESD\r\n    07/11/2007  09:00            17.734 eula.1028.txt\r\n    07/11/2007  09:00            17.734 eula.1031.txt\r\n    07/11/2007  09:00            10.134 eula.1033.txt\r\n    07/11/2007  09:00            17.734 eula.1036.txt\r\n    07/11/2007  09:00            17.734 eula.1040.txt\r\n    07/11/2007  09:00               118 eula.1041.txt\r\n    07/11/2007  09:00            17.734 eula.1042.txt\r\n    07/11/2007  09:00            17.734 eula.2052.txt\r\n    07/11/2007  09:00            17.734 eula.3082.txt\r\n    11/12/2024  15:28    \u003cDIR\u003e          Games\r\n    07/11/2007  09:00             1.110 globdata.ini\r\n    25/03/2023  15:16    \u003cDIR\u003e          GOG Games\r\n    16/02/2024  11:10             6.704 graph.log\r\n    10/04/2025  14:00    \u003cDIR\u003e          inetpub\r\n    07/11/2007  09:44           855.040 install.exe\r\n    07/11/2007  09:00               843 install.ini\r\n    07/11/2007  09:44            75.280 install.res.1028.dll\r\n    07/11/2007  09:44            95.248 install.res.1031.dll\r\n    07/11/2007  09:44            90.128 install.res.1033.dll\r\n    07/11/2007  09:44            96.272 install.res.1036.dll\r\n    07/11/2007  09:44            94.224 install.res.1040.dll\r\n    07/11/2007  09:44            80.400 install.res.1041.dll\r\n    07/11/2007  09:44            78.864 install.res.1042.dll\r\n    07/11/2007  09:44            74.768 install.res.2052.dll\r\n    07/11/2007  09:44            95.248 install.res.3082.dll\r\n    02/06/2025  05:02    \u003cDIR\u003e          Intel\r\n    18/02/2023  01:11    \u003cDIR\u003e          Mono\r\n    18/02/2023  01:11         2.179.072 mono.msi\r\n    01/12/2006  23:37           904.704 msdia80.dll\r\n    07/12/2019  11:14    \u003cDIR\u003e          PerfLogs\r\n    28/05/2025  14:24    \u003cDIR\u003e          Program Files\r\n    12/03/2025  23:16    \u003cDIR\u003e          Program Files (x86)\r\n    10/12/2022  22:44    \u003cDIR\u003e          Riot Games\r\n    17/10/2024  12:45    \u003cDIR\u003e          sqlite\r\n    18/02/2023  01:11    \u003cDIR\u003e          System\r\n    18/02/2023  01:11    \u003cDIR\u003e          System64\r\n    22/01/2024  22:06    \u003cDIR\u003e          Users\r\n    07/11/2007  09:00             5.686 vcredist.bmp\r\n    07/11/2007  08:09         1.442.522 VC_RED.cab\r\n    07/11/2007  08:12           232.960 VC_RED.MSI\r\n    28/11/2024  13:17    \u003cDIR\u003e          VS-workplace\r\n    31/05/2025  21:53    \u003cDIR\u003e          Windows\r\n    10/05/2025  13:14    \u003cDIR\u003e          XboxGames\r\n                  27 archivos      6.543.463 bytes\r\n                  21 dirs  47.099.088.896 bytes libres\r\n    \"Bienvenidos hoy al Interprete de comandos\"\r\n    clang: error: no such file or directory: \u0027CMakeFiles/cmTC_a9bfa.dir/testCCompiler.c.o\u0027\r\n    ninja: build stopped: subcommand failed.\r\n    \n    \n\n  \n\n  CMake will not be able to correctly generate this project.\nCall Stack (most recent call first):\n  CMakeLists.txt",
+    "file_": "C:\\Users\\Subhan\\AndroidStudioProjects\\AplicacionOCR\\openCVLibrary\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 0
+  }
+]

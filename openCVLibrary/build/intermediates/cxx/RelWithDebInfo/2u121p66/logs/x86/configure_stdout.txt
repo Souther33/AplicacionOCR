@@ -1,0 +1,9 @@
+-- The C compiler identification is Clang 18.0.1
+-- The CXX compiler identification is Clang 18.0.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: C:/Users/Subhan/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
+-- Check for working C compiler: C:/Users/Subhan/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe - broken
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/Subhan/AndroidStudioProjects/AplicacionOCR/openCVLibrary/.cxx/RelWithDebInfo/2u121p66/x86/CMakeFiles/CMakeOutput.log".
+See also "C:/Users/Subhan/AndroidStudioProjects/AplicacionOCR/openCVLibrary/.cxx/RelWithDebInfo/2u121p66/x86/CMakeFiles/CMakeError.log".

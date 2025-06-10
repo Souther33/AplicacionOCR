@@ -7,4 +7,8 @@
 
     <color name="blue1">#2196F3</color>
     <color name="red1">#F44336</color>
+
+    <color name="btn_copia_seguridad_activado">#1DB987</color>
+    <color name="btn_copia_seguridad_desactivado">#321DB987</color>
+
 </resources>

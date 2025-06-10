@@ -29,7 +29,7 @@ class CrudDocumentos {
         try {
             val cursor = con.query(
                 Aplicacion.TABLA,
-                arrayOf("id", "nombre", "imagen", "contenido"),
+                arrayOf("id", "nombre", "imagen", "contenido", "tipo"),
                 null,
                 null,
                 null,
@@ -42,6 +42,7 @@ class CrudDocumentos {
                     cursor.getString(1),
                     cursor.getString(2),
                     cursor.getString(3),
+                    cursor.getString(4)
                 )
                 lista.add(personaje)
             }
@@ -83,9 +84,11 @@ class CrudDocumentos {
 
     private fun DocumentoModel.toContentValues(): ContentValues {
         return ContentValues().apply {
+            put("id", id)
             put("nombre", nombre)
             put("imagen", imagen)
             put("contenido", contenido)
+            put("tipo", tipo)
         }
     }
 }

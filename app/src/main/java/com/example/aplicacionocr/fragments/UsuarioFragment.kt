@@ -3,12 +3,16 @@ package com.example.aplicacionocr.fragments
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity.RESULT_CANCELED
+import androidx.appcompat.app.AppCompatActivity.RESULT_OK
 import androidx.core.content.ContextCompat
 import androidx.core.view.isGone
 import androidx.core.view.isInvisible
@@ -17,7 +21,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.aplicacionocr.R
 import com.example.aplicacionocr.databinding.FragmentUsuarioBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -26,6 +34,32 @@ class UsuarioFragment : Fragment() {
     private lateinit var binding: FragmentUsuarioBinding
     private lateinit var auth: FirebaseAuth
     private val documentoViewModel: FragmentsViewModel by activityViewModels()
+
+    private val responseLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        if(it.resultCode == RESULT_OK) {
+            val datos = GoogleSignIn.getSignedInAccountFromIntent(it.data)
+            try {
+                val cuenta = datos.getResult(ApiException::class.java)
+                if(cuenta != null) {
+                    val credenciales = GoogleAuthProvider.getCredential(cuenta.idToken, null)
+                    FirebaseAuth.getInstance().signInWithCredential(credenciales)
+                        .addOnCompleteListener {
+                            if(it.isSuccessful) {
+                                mostrarUsuario()
+                            }
+                        }
+                        .addOnFailureListener {
+                            Toast.makeText(requireActivity(), it.message.toString(), Toast.LENGTH_SHORT).show()
+                        }
+                }
+            } catch(e: ApiException) {
+                Log.d("ERROR de API:>>>>", e.message.toString())
+            }
+        }
+        if(it.resultCode == RESULT_CANCELED) {
+            Toast.makeText(requireActivity(), "No se ha podido iniciar sesión, prueba más tarde.", Toast.LENGTH_SHORT).show()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +85,11 @@ class UsuarioFragment : Fragment() {
 
     private fun setListeners() {
         binding.btnLogout.setOnClickListener {
-            confirmarLogout()
+            if(auth.currentUser == null) {
+                login()
+            } else {
+                confirmarLogout()
+            }
         }
 
         binding.btnBorrarDocumentosAll.setOnClickListener {
@@ -61,12 +99,6 @@ class UsuarioFragment : Fragment() {
     }
 
     private fun mostrarUsuario() {
-        /*if(auth.currentUser == null) {
-            binding.tvUsuarioLogueado.text = "No se ha iniciado sesión"
-        } else {
-            binding.tvUsuarioLogueado.text = "Usuario: " + auth.currentUser?.email.toString()
-        }*/
-
         val usuario = auth.currentUser
 
         if (usuario == null) {
@@ -78,6 +110,10 @@ class UsuarioFragment : Fragment() {
             }
         } else {
             binding.tvUsuarioLogueado.text = usuario.email
+            binding.btnLogout.apply {
+                text = "Cerrar Sesión"
+                setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.red1))
+            }
 
             val photoUrl = usuario.photoUrl
             if (photoUrl != null) {
@@ -131,5 +167,17 @@ class UsuarioFragment : Fragment() {
         }
         builder.show()
 
+    }
+
+    private fun login() {
+        val googleConf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.web_client_id))
+            .requestEmail()
+            .build()
+        val googleClient = GoogleSignIn.getClient(requireActivity(), googleConf)
+
+        googleClient.signOut() //Fundamental para que no haga login automatico si he cerrado sesion
+
+        responseLauncher.launch(googleClient.signInIntent)
     }
 }

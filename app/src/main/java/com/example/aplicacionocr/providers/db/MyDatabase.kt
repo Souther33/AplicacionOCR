@@ -12,7 +12,8 @@ class MyDatabase: SQLiteOpenHelper(Aplicacion.contexto, Aplicacion.DB, null, Apl
             "id integer primary key," +
             "nombre text not null," +
             "imagen text not null," +
-            "contenido text not null);"
+            "contenido text not null," +
+            "tipo text not null);"
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL(q)

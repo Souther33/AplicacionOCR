@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <files-path name="pdfs" path="." />
+
+    <!-- Permite acceso a cualquier archivo dentro de /data/data/tu.app/files -->
+    <files-path name="root_files" path="." />
+
+    <!-- Subcarpeta temporal usada para restauración -->
+    <files-path name="restaurado_temp" path="restaurado_temp/" />
+
+    <!-- Subcarpeta para imágenes restauradas -->
+    <files-path name="imagenes_restauradas" path="restaurado_temp/imagenes/" />
+
+    <!-- Subcarpeta para PDFs restaurados -->
+    <files-path name="pdfs_restaurados" path="restaurado_temp/pdfs/" />
 </paths>

@@ -1,5 +1,40 @@
 <resources>
-    <string name="app_name">AplicacionOCR</string>
+    <string name="app_name">ScanVault</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="titulo_ayuda">Ayuda</string>
+    <string name="titulo_sobre_app">Sobre la App</string>
+    <string name="titulo_terminos">Términos y condiciones / Política de privacidad</string>
+    <string name="titulo_soporte">Soporte o contacto</string>
+
+    <!-- Mensajes -->
+    <string name="mensaje_ayuda">
+        Bienvenido a la sección de Ayuda.\n\nCon esta aplicación puedes escanear documentos utilizando la cámara de tu dispositivo. La app utiliza tecnología OCR gratuita proporcionada por ML Kit para extraer el texto de las imágenes.\n\nUna vez que el texto ha sido reconocido, puedes editarlo si lo deseas y luego convertirlo a PDF. Estos PDF se pueden guardar localmente o subir a la nube si estás logueado con tu cuenta de Google.\n\nEn la pantalla principal puedes acceder a tus documentos guardados organizados en tarjetas (CardView) dentro de una lista.\n\nPara cualquier duda adicional, consulta la sección de Soporte.
+    </string>
+
+    <string name="mensaje_sobre_la_app">
+        Esta aplicación está diseñada para facilitar la digitalización de documentos impresos.\n\nPermite capturar imágenes de documentos mediante la cámara y convertirlas en texto utilizando OCR con ML Kit, sin necesidad de conexión a internet.\n\nEl texto extraído se puede editar directamente desde la app, y luego guardar como archivo PDF. Todos los documentos pueden almacenarse localmente y están organizados en una interfaz intuitiva basada en tarjetas.\n\nAdemás, si el usuario inicia sesión con su cuenta de Google, puede subir los archivos PDF a la nube para mantener una copia de seguridad.\n\nRápida, ligera y completamente gratuita.
+    </string>
+
+    <string name="mensaje_terminos">
+        Términos y Condiciones / Política de Privacidad\n\n1. Esta aplicación no almacena ni comparte tus datos personales sin tu consentimiento.\n2. El reconocimiento de texto se realiza localmente en tu dispositivo utilizando ML Kit, por lo que tus imágenes y textos no se envían a servidores externos.\n3. Si decides iniciar sesión con tu cuenta de Google, solo se utilizará para acceder a Google Drive y guardar tus archivos PDF en tu cuenta personal.\n4. Los archivos PDF y textos editados se almacenan localmente en tu dispositivo, y puedes eliminarlos cuando lo desees.\n5. Al usar esta aplicación, aceptas estos términos y te comprometes a utilizarla con fines legales y personales.\n\nLa aplicación es completamente gratuita y no incluye anuncios ni rastreadores.
+    </string>
+
+    <string name="mensaje_soporte">
+        ¿Necesitas ayuda?\n\nSi tienes problemas para escanear, convertir a PDF, acceder a tus documentos o cualquier otra duda sobre el funcionamiento de la app, no dudes en contactarnos.\n\nPuedes escribirnos a:\nsfarmanmuhammad@gamail.com\n\nIntentaremos responderte lo antes posible. También estamos abiertos a sugerencias para mejorar la app y añadir nuevas funciones que te sean útiles.\n\nGracias por usar nuestra aplicación.
+    </string>
+
+    <string name="titulo1">
+        Convierte tus documentos en PDF
+    </string>
+
+    <string name="titulo2">
+        Con editor de texto y guardado en la nube
+    </string>
+
+    <string name="copia_seguridad_fecha">
+        Última copia de seguridad realizada:
+    </string>
+
 </resources>

@@ -5,7 +5,8 @@ import java.io.Serializable
 
 data class DocumentoModel(
     val id: Long = System.currentTimeMillis(),
-    val nombre: String,
-    val imagen: String,
-    val contenido: String
+    var nombre: String,
+    var imagen: String,
+    var contenido: String,
+    var tipo: String
 ): Serializable

@@ -8,12 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.aplicacionocr.CamaraActivity
+import com.example.aplicacionocr.EditorTextoActivity
 import com.example.aplicacionocr.databinding.FragmentDocumentosBinding
 import com.example.aplicacionocr.providers.db.CrudDocumentos
 import com.example.aplicacionocr.recycler.DocumentoAdapter
 import com.example.aplicacionocr.recycler.DocumentoModel
 import androidx.fragment.app.activityViewModels
+import com.example.aplicacionocr.ScannerActivity
 
 class DocumentosFragment : Fragment() {
 
@@ -52,23 +53,19 @@ class DocumentosFragment : Fragment() {
             filtrarLista(query)
             true
         }
+
+        binding.fabEditarTexto.setOnClickListener {
+            startActivity(Intent(requireContext(), EditorTextoActivity::class.java))
+        }
     }
 
     private fun setRecycler() {
         val layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recDocumentos2.layoutManager = layoutManager
 
-        /*traerRegistros()
-        adapter = DocumentoAdapter(lista, {position -> borrarDocumento(position)}, {c -> update(c)})*/
-        //lista = documentoViewModel.documentos.value ?: mutableListOf()
-        /*adapter = DocumentoAdapter(lista, { position ->
-            documentoViewModel.borrarDocumento(lista[position])
-        }, { c -> update(c) })*/
         adapter = DocumentoAdapter(mutableListOf(), { position ->
             documentoViewModel.borrarDocumento(lista[position])
         }, { c -> update(c) })
-        // Ya no necesitas traerRegistros ni borrarDocumento manualmente aquí,
-        // el ViewModel se encarga
 
         binding.recDocumentos2.adapter = adapter
     }
@@ -78,9 +75,13 @@ class DocumentosFragment : Fragment() {
     }
 
     private fun update(c: DocumentoModel) {
-        val i = Intent(requireContext(), CamaraActivity::class.java).apply {
-            putExtra("PERSONAJE", c)
+        val i = if (c.tipo == "editor") {
+            Intent(requireContext(), EditorTextoActivity::class.java)
+        } else {
+            Intent(requireContext(), ScannerActivity::class.java)
         }
+
+        i.putExtra("PERSONAJE", c)
 
         startActivity(i)
     }
@@ -90,10 +91,11 @@ class DocumentosFragment : Fragment() {
         // Eliminamos de la lista
         lista.removeAt(position)
         // Eliminamos de la base de datos
-        if(CrudDocumentos().borrar(id)) {
+        if (CrudDocumentos().borrar(id)) {
             adapter.notifyItemRemoved(position)
         } else {
-            Toast.makeText(requireContext(), "No se eliminó ningún registro", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "No se eliminó ningún registro", Toast.LENGTH_SHORT)
+                .show()
         }
     }
 
@@ -111,7 +113,7 @@ class DocumentosFragment : Fragment() {
     }
 
     private fun mostrarIcono() {
-        if(lista.size > 0) {
+        if (lista.size > 0) {
             binding.ivVacio.visibility = View.INVISIBLE
             binding.tvVacio.visibility = View.INVISIBLE
         } else {

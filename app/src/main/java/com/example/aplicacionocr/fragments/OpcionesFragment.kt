@@ -19,53 +19,6 @@ import com.google.firebase.ktx.Firebase
 class OpcionesFragment : Fragment() {
 
     private lateinit var binding: FragmentOpcionesBinding
-    val mensajeAyuda = """
-Bienvenido a la sección de Ayuda.
-
-Con esta aplicación puedes escanear documentos utilizando la cámara de tu dispositivo. La app utiliza tecnología OCR gratuita proporcionada por ML Kit para extraer el texto de las imágenes.
-
-Una vez que el texto ha sido reconocido, puedes editarlo si lo deseas y luego convertirlo a PDF. Estos PDF se pueden guardar localmente o subir a la nube si estás logueado con tu cuenta de Google.
-
-En la pantalla principal puedes acceder a tus documentos guardados organizados en tarjetas (CardView) dentro de una lista.
-
-Para cualquier duda adicional, consulta la sección de Soporte.
-""".trimIndent()
-
-    val mensajeSobreLaApp = """
-Esta aplicación está diseñada para facilitar la digitalización de documentos impresos.
-
-Permite capturar imágenes de documentos mediante la cámara y convertirlas en texto utilizando OCR con ML Kit, sin necesidad de conexión a internet.
-
-El texto extraído se puede editar directamente desde la app, y luego guardar como archivo PDF. Todos los documentos pueden almacenarse localmente y están organizados en una interfaz intuitiva basada en tarjetas.
-
-Además, si el usuario inicia sesión con su cuenta de Google, puede subir los archivos PDF a la nube para mantener una copia de seguridad.
-
-Rápida, ligera y completamente gratuita.
-""".trimIndent()
-    val mensajeTerminos = """
-Términos y Condiciones / Política de Privacidad
-
-1. Esta aplicación no almacena ni comparte tus datos personales sin tu consentimiento.
-2. El reconocimiento de texto se realiza localmente en tu dispositivo utilizando ML Kit, por lo que tus imágenes y textos no se envían a servidores externos.
-3. Si decides iniciar sesión con tu cuenta de Google, solo se utilizará para acceder a Google Drive y guardar tus archivos PDF en tu cuenta personal.
-4. Los archivos PDF y textos editados se almacenan localmente en tu dispositivo, y puedes eliminarlos cuando lo desees.
-5. Al usar esta aplicación, aceptas estos términos y te comprometes a utilizarla con fines legales y personales.
-
-La aplicación es completamente gratuita y no incluye anuncios ni rastreadores.
-""".trimIndent()
-    val mensajeSoporte = """
-¿Necesitas ayuda?
-
-Si tienes problemas para escanear, convertir a PDF, acceder a tus documentos o cualquier otra duda sobre el funcionamiento de la app, no dudes en contactarnos.
-
-Puedes escribirnos a:
-soporte@tudominio.com
-
-Intentaremos responderte lo antes posible. También estamos abiertos a sugerencias para mejorar la app y añadir nuevas funciones que te sean útiles.
-
-Gracias por usar nuestra aplicación.
-""".trimIndent()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,53 +35,33 @@ Gracias por usar nuestra aplicación.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val prefs = requireContext().getSharedPreferences("preferencias", android.content.Context.MODE_PRIVATE)
+        binding.swDesactivarNtfs.isChecked = prefs.getBoolean("notificaciones_activadas", true)
+
         setListeners()
     }
 
     private fun setListeners() {
         binding.btnAyuda.setOnClickListener {
-            mostrarVentana("Ayuda", mensajeAyuda)
+            mostrarVentana(getString(R.string.titulo_ayuda), getString(R.string.mensaje_ayuda))
         }
 
         binding.btnSobreLaApp.setOnClickListener {
-            mostrarVentana("Sobre la App", mensajeSobreLaApp)
+            mostrarVentana(getString(R.string.titulo_sobre_app), getString(R.string.mensaje_sobre_la_app))
         }
 
         binding.btnTerminos.setOnClickListener {
-            mostrarVentana("Términos y condiciones / Política de privacidad", mensajeTerminos)
+            mostrarVentana(getString(R.string.titulo_terminos), getString(R.string.mensaje_terminos))
         }
 
         binding.btnSoporte.setOnClickListener {
-            mostrarVentana("Soporte o contacto", mensajeSoporte)
+            mostrarVentana(getString(R.string.titulo_soporte), getString(R.string.mensaje_soporte))
         }
-    }
 
-    private fun mostrarVentana1() {
-            val builder = AlertDialog.Builder(requireContext())
-            builder.setTitle("Confirmación")
-            builder.setMessage("¿Estás seguro que deseas continuar?")
-            builder.setPositiveButton("Sí") { dialog, _ ->
-                // Acción si acepta
-                dialog.dismiss()
-            }
-            builder.setNegativeButton("No") { dialog, _ ->
-                dialog.dismiss()
-            }
-            builder.show()
-
-    }
-
-    private fun mostrarVentana2() {
-        val popupView = layoutInflater.inflate(R.layout.fragment_nube, null)
-        val popupWindow = PopupWindow(
-            popupView,
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            true
-        )
-
-        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0)
-
+        binding.swDesactivarNtfs.setOnCheckedChangeListener { _, isChecked ->
+            val prefs = requireContext().getSharedPreferences("preferencias", android.content.Context.MODE_PRIVATE)
+            prefs.edit().putBoolean("notificaciones_activadas", isChecked).apply()
+        }
     }
 
     private fun mostrarVentana(titulo: String, mensaje: String) {
